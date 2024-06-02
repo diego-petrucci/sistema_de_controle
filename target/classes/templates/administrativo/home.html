@@ -39,17 +39,37 @@
 
     <div class="container-fluid">
         <div class="row">
+          <div class="row">
             <div class="col-md-2">
-              <div class="list-group" style="margin-top: 10px;">
-                <button type="button" class="list-group-item list-group-item-action active" aria-current="true" style="text-align: center;" disabled><i class="fa-solid fa-bars" style="color: #ffffff;"></i> MENU</button>
-                <a href="/cadastroEstado" style="text-decoration: none;  color: black"><button type="button" class="list-group-item list-group-item-action" style="text-align: center;">Cadastrar Estados</button></a>
-                <a href="/listarEstado" style="text-decoration: none;  color: black"><button type="button" class="list-group-item list-group-item-action" style="text-align: center;">Listar Estados</button></a>
-                <a href="#" style="text-decoration: none;  color: black"><button type="button" class="list-group-item list-group-item-action" style="text-align: center;">#</button></a>
-                <a href="#" style="text-decoration: none;  color: black"><button type="button" class="list-group-item list-group-item-action" style="text-align: center;">#</button></a>
-                <a href="#" style="text-decoration: none;  color: black"><button type="button" class="list-group-item list-group-item-action" style="text-align: center;">#</button></a>
-              </div>
+                <ul class="list-group" style="margin-top: 10px;">
+                
+                  <li class="btn btn-dark" type="button" data-bs-toggle="collapse" data-bs-target="#multiCollapseExample1" aria-expanded="false" aria-controls="multiCollapseExample1 "><i class="fa-solid fa-gears"></i> Funcionalidades</li>
+                  <div class="collapse multi-collapse" id="multiCollapseExample1">
+                     <a href="#"><li class="list-group-item">Efetuar Venda</li></a>
+                     <a href="#"><li class="list-group-item">Efetuar Venda</li></a>
+                     <a href="#"><li class="list-group-item">Efetuar Venda</li></a>
+                     <a href="#"><li class="list-group-item">Efetuar Venda</li></a></div>
+
+                    
+                    <li class="btn btn-dark" type="button" data-bs-toggle="collapse" data-bs-target="#multiCollapseExample2" aria-expanded="false" aria-controls="multiCollapseExample2 "><i class="fa-solid fa-circle-plus"></i> Cadastros</li>
+                    <div class="collapse multi-collapse" id="multiCollapseExample2">
+                    <a href="/cadastroEstado"><li class="list-group-item">Cadastro Estado</li></a>
+                    <a href="/cadastroCidade"><li class="list-group-item">Cadastro Cidade</li></a>
+                    <a href="/cadastroFornecedor"><li class="list-group-item">Cadastro Fornecedor</li></a>
+                    <a href="/cadastroFuncionario"><li class="list-group-item">Cadastro Funcionario</li></a>
+                    <a href="/cadastroProduto"><li class="list-group-item">Cadastro Produto</li></a></div>        
+                    
+                               
+                    <li class="btn btn-dark" type="button" data-bs-toggle="collapse" data-bs-target="#multiCollapseExample3" aria-expanded="false" aria-controls="multiCollapseExample3 "><i class="fa-solid fa-rectangle-list"></i> Listas</li>
+                    <div class="collapse multi-collapse" id="multiCollapseExample3">
+                    <a href="/listarEstado"><li class="list-group-item">Lista Estado</li></a>
+                    <a href="/listarCidade"><li class="list-group-item">Lista Cidade</li></a>
+                    <a href="/listarFornecedor"><li class="list-group-item">Lista Fornecedor</li></a>
+                    <a href="/listarFuncionario"><li class="list-group-item">Lista Funcionario</li></a>
+                    <a href="/listarProduto"><li class="list-group-item">Lista Produto</li></a></div>
+                  </ul>
             </div>
-            <div class="col-md-9">
+            <div class="col-md-10">
                 <h1>Bem Vindo ao Sistema HAXI</h1>
                 <p>Sistema de vendas simplificado e intuitivo</p>
                 <p>Feito em 2024, por HAXI Company</p>
