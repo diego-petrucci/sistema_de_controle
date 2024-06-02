@@ -1,4 +1,4 @@
-package com.example.sistema.models;
+package com.example.sistema.controllers;
 
 import java.util.Optional;
 
@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.servlet.ModelAndView;
 
+import com.example.sistema.models.Estado;
 import com.example.sistema.repositories.EstadoRepository;
 
 
