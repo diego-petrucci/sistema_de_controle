@@ -12,9 +12,9 @@ import org.springframework.web.servlet.ModelAndView;
 
 import com.example.sistema.repositories.EstadoRepository;
 
+
 @Controller
 public class EstadoController {
-	
 	@Autowired
 	private EstadoRepository estadoRepository;
 	
@@ -31,13 +31,14 @@ public class EstadoController {
 		mv.addObject("listaEstados", estadoRepository.findAll());
 		return mv;
 	}
-	
+
 	@GetMapping("/editarEstado/{id}")
 	public ModelAndView editar(@PathVariable("id") Long id) {
 		Optional<Estado> estado = estadoRepository.findById(id);
 		return cadastrar(estado.get());
 		
 	}
+
 	
 	@GetMapping("/excluirEstado/{id}")
 	public ModelAndView remover(@PathVariable("id") Long id) {
