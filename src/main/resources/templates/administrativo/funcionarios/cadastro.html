@@ -53,10 +53,10 @@ xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
               <input required type="text" th:field="*{cpf}" class="form-control" id="cpf">
               
               <label>Telefone:</label>
-              <input required type="text" th:field="*{telefone}" class="form-control" id="telefone">  
+              <input required type="text" th:field="*{telefone}" class="form-control" id="phone_with_ddd">  
               
               <label>Cidade:</label>     
-              <select th:field="*{cidade}" class="form-control">
+              <select required th:field="*{cidade}" class="form-control">
                 <option th:each="cdd : ${listaCidades}" th:value="${cdd.id}" th:text="${cdd.nome}"></option>
               </select>  
 
@@ -96,6 +96,9 @@ xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
       $(document).ready(function(){
   $('#cpf').mask('000.000.000-00');
 });
+      $(document).ready(function(){
+        $('#phone_with_ddd').mask('(00) 0 0000-0000');
+      });
     </script>
   </body>
 </html>
