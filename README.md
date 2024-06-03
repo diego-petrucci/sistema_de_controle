@@ -17,7 +17,6 @@ Validação de Dados:​
 
 - O sistema deve validar que todos os campos obrigatórios estão preenchidos.
 - O sistema deve validar que o preço do produto está em um formato numérico válido.
-- O sistema deve validar que a quantidade em estoque é um número inteiro não negativo.
 
 Salvar Produto:
 
