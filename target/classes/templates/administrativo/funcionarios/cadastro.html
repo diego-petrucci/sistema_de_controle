@@ -20,7 +20,7 @@ xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">]
       <!--<img src="#" alt="" width="30" height="24">-->
         <div class="container-fluid">
-          <a class="navbar-brand" href="/administrativo">LOJA sistema</a>
+          <a class="navbar-brand" href="/administrativo">Estoque</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -47,30 +47,16 @@ xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
               <input hidden type="text" readonly="true" class="form-control" id="id" th:field="*{id}">
               
               <label>Nome Funcionario:</label>
-              <input required type="text" th:field="*{nome}" class="form-control" id="nome">      
+              <input required type="text" th:field="*{nome}" class="form-control" id="nome">   
               
-              <label>CPF:</label>
-              <input required type="text" th:field="*{cpf}" class="form-control" id="cpf">
-              
-              <label>Telefone:</label>
-              <input required type="text" th:field="*{telefone}" class="form-control" id="phone_with_ddd">  
-              
-              <label>Cidade:</label>     
-              <select required th:field="*{cidade}" class="form-control">
-                <option th:each="cdd : ${listaCidades}" th:value="${cdd.id}" th:text="${cdd.nome}"></option>
-              </select>  
-
-              <label>Endereço:</label>
-              <input required type="text" th:field="*{endereco}" class="form-control" id="endereco">
-              
-              <label>Bairro:</label>
-              <input required type="text" th:field="*{bairro}" class="form-control" id="bairro">
-
               <label>Email:</label>
               <input required type="email" th:field="*{email}" class="form-control" id="email">
-
-              <label>Cargo:</label>
-              <input required type="text" th:field="*{cargo}" class="form-control" id="cargo"> 
+              
+              <label>Login:</label>
+              <input required type="text" th:field="*{login}" class="form-control" id="login">
+              
+              <label>Senha:</label>
+              <input required type="password" th:field="*{senha}" class="form-control" id="senha">  
             </div>
             <a href="/administrativo" class="btn btn-danger">Voltar</a>
             <button type="submit" class="btn btn-primary">Salvar</button>

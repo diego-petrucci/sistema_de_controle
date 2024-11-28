@@ -1,9 +1,9 @@
 package com.example.sistema.models;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-import jakarta.persistence.ManyToOne;
 
 
 @Entity
@@ -13,16 +13,9 @@ public class Funcionario{
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
     private String nome;
-    private String cpf;
-    private String telefone;
-    private String endereco;
-    private String bairro;
     private String email;
-    private String cargo;
-
-    @ManyToOne
-    private Cidade cidade;
-
+    private String login;
+    private String senha;
 
     public Long getId() {
         return id;
@@ -43,47 +36,6 @@ public class Funcionario{
         this.nome = nome;
     }
 
-
-    public String getCpf() {
-        return cpf;
-    }
-
-
-    public void setCpf(String cpf) {
-        this.cpf = cpf;
-    }
-
-
-    public String getTelefone() {
-        return telefone;
-    }
-
-
-    public void setTelefone(String telefone) {
-        this.telefone = telefone;
-    }
-
-
-    public String getEndereco() {
-        return endereco;
-    }
-
-
-    public void setEndereco(String endereco) {
-        this.endereco = endereco;
-    }
-
-
-    public String getBairro() {
-        return bairro;
-    }
-
-
-    public void setBairro(String bairro) {
-        this.bairro = bairro;
-    }
-
-
     public String getEmail() {
         return email;
     }
@@ -93,23 +45,19 @@ public class Funcionario{
         this.email = email;
     }
 
-
-    public String getCargo() {
-        return cargo;
+    public String getLogin() {
+        return login;
     }
 
-
-    public void setCargo(String cargo) {
-        this.cargo = cargo;
+    public void setLogin(String Login) {
+        this.login = Login;
     }
 
-
-    public Cidade getCidade() {
-        return cidade;
+    public String getSenha() {
+        return senha;
     }
 
-
-    public void setCidade(Cidade cidade) {
-        this.cidade = cidade;
+    public void setSenha(String senha) {
+        this.senha = senha;
     }
 }
