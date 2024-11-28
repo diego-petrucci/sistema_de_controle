@@ -62,8 +62,7 @@ xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
 					<td th:text="${funcionario.nome}"></td>
 					<td th:text="${funcionario.email}"></td>
           <td th:text="${funcionario.login}"></td>
-          <td th:text="${funcionario.senha}"></td>
-          <!--<td th:text="${funcionario.cargo}"></td> -->
+          <td th:text="${funcionario.senhaMascarada}"></td>
 					<td colspan="2">
 						<a th:href="@{/editarFuncionario/{id}(id=${funcionario.id})}"><i class="fa-solid fa-pen-to-square" style="color: #ededed;"></i></a>
 						<a th:href="@{/excluirFuncionario/{id}(id=${funcionario.id})}"><i class="fa-solid fa-trash" style="color: #ff0000;"></i></a>
