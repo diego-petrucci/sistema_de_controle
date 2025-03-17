@@ -39,7 +39,7 @@ public class CidadeController {
 	}
 
 	@GetMapping("/editarCidade/{id}")
-	public ModelAndView editar(@PathVariable("id") Long id) {
+	public ModelAndView editar(@PathVariable Long id) {
 		Optional<Cidade> cidade = cidadeRepository.findById(id);
 		return cadastrar(cidade.get());
 		
@@ -47,7 +47,7 @@ public class CidadeController {
 
 	
 	@GetMapping("/excluirCidade/{id}")
-	public ModelAndView remover(@PathVariable("id") Long id) {
+	public ModelAndView remover(@PathVariable Long id) {
 		Optional<Cidade> cidade = cidadeRepository.findById(id);
 		cidadeRepository.delete(cidade.get());
 		return listar();

@@ -39,7 +39,7 @@ public class ClienteController {
 	}
 
 	@GetMapping("/editarCliente/{id}")
-	public ModelAndView editar(@PathVariable("id") Long id) {
+	public ModelAndView editar(@PathVariable Long id) {
 		Optional<Cliente> cliente = clienteRepository.findById(id);
 		return cadastrar(cliente.get());
 		
@@ -47,7 +47,7 @@ public class ClienteController {
 
 	
 	@GetMapping("/excluirCliente/{id}")
-	public ModelAndView remover(@PathVariable("id") Long id) {
+	public ModelAndView remover(@PathVariable Long id) {
 		Optional<Cliente> cliente = clienteRepository.findById(id);
 		clienteRepository.delete(cliente.get());
 		return listar();

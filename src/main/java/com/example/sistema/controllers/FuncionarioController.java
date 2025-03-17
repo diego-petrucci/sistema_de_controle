@@ -35,7 +35,7 @@ public class FuncionarioController {
 	}
 
 	@GetMapping("/editarFuncionario/{id}")
-	public ModelAndView editar(@PathVariable("id") Long id) {
+	public ModelAndView editar(@PathVariable Long id) {
 		Optional<Funcionario> funcionario = funcionarioRepository.findById(id);
 		return cadastrar(funcionario.get());
 		
@@ -43,7 +43,7 @@ public class FuncionarioController {
 
 	
 	@GetMapping("/excluirFuncionario/{id}")
-	public ModelAndView remover(@PathVariable("id") Long id) {
+	public ModelAndView remover(@PathVariable Long id) {
 		Optional<Funcionario> funcionario = funcionarioRepository.findById(id);
 		funcionarioRepository.delete(funcionario.get());
 		return listar();

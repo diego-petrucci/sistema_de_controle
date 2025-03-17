@@ -34,7 +34,7 @@ public class EstadoController {
 	}
 
 	@GetMapping("/editarEstado/{id}")
-	public ModelAndView editar(@PathVariable("id") Long id) {
+	public ModelAndView editar(@PathVariable Long id) {
 		Optional<Estado> estado = estadoRepository.findById(id);
 		return cadastrar(estado.get());
 		
@@ -42,7 +42,7 @@ public class EstadoController {
 
 	
 	@GetMapping("/excluirEstado/{id}")
-	public ModelAndView remover(@PathVariable("id") Long id) {
+	public ModelAndView remover(@PathVariable Long id) {
 		Optional<Estado> estado = estadoRepository.findById(id);
 		estadoRepository.delete(estado.get());
 		return listar();

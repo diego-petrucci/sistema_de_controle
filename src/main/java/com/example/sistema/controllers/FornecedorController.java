@@ -39,7 +39,7 @@ public class FornecedorController {
 	}
 
 	@GetMapping("/editarFornecedor/{id}")
-	public ModelAndView editar(@PathVariable("id") Long id) {
+	public ModelAndView editar(@PathVariable Long id) {
 		Optional<Fornecedor> fornecedor = fornecedorRepository.findById(id);
 		return cadastrar(fornecedor.get());
 		
@@ -47,7 +47,7 @@ public class FornecedorController {
 
 	
 	@GetMapping("/excluirFornecedor/{id}")
-	public ModelAndView remover(@PathVariable("id") Long id) {
+	public ModelAndView remover(@PathVariable Long id) {
 		Optional<Fornecedor> fornecedor = fornecedorRepository.findById(id);
 		fornecedorRepository.delete(fornecedor.get());
 		return listar();

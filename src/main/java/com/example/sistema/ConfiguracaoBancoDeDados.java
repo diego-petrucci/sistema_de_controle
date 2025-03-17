@@ -10,8 +10,8 @@ import org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter;
 
 @Configuration
 public class ConfiguracaoBancoDeDados {
-	@Bean
-	public DataSource dataSource() {
+    @Bean
+    DataSource dataSource() {
 		DriverManagerDataSource dataSource = new DriverManagerDataSource();
 		dataSource.setDriverClassName("org.postgresql.Driver"); //declara as configurações de acesso
 		dataSource.setUrl("jdbc:postgresql://localhost:5432/estoque");
@@ -19,9 +19,9 @@ public class ConfiguracaoBancoDeDados {
 		dataSource.setPassword("290704");//senha
 		return dataSource;
 	}
-	
-	@Bean
-	public JpaVendorAdapter jpaVendorAdapter() {
+
+    @Bean
+    JpaVendorAdapter jpaVendorAdapter() {
 		HibernateJpaVendorAdapter adapter = new HibernateJpaVendorAdapter();
 		adapter.setDatabase(Database.POSTGRESQL); //driver do banco
 		adapter.setShowSql(true); //mostrar no console o sql, é interessante

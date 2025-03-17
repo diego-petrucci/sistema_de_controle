@@ -34,7 +34,7 @@ public class ProdutoController {
 	}
 
 	@GetMapping("/editarProduto/{id}")
-	public ModelAndView editar(@PathVariable("id") Long id) {
+	public ModelAndView editar(@PathVariable Long id) {
 		Optional<Produto> produto = produtoRepository.findById(id);
 		return cadastrar(produto.get());
 		
@@ -42,7 +42,7 @@ public class ProdutoController {
 
 	
 	@GetMapping("/excluirProduto/{id}")
-	public ModelAndView remover(@PathVariable("id") Long id) {
+	public ModelAndView remover(@PathVariable Long id) {
 		Optional<Produto> produto = produtoRepository.findById(id);
 		produtoRepository.delete(produto.get());
 		return listar();
